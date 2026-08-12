@@ -1,6 +1,6 @@
 # VS Code Zed-Like Minimal Setup
 
-> Konfigurasi VS Code minimalis terinspirasi Zed Editor — clean UI, smooth scroll, terminal split-view, dan Discord Rich Presence tanpa status bar berisik.
+> Konfigurasi VS Code minimalis terinspirasi Zed Editor - clean UI, smooth scroll, terminal split-view, dan Discord Rich Presence tanpa status bar berisik.
 
 ![VS Code Zed Theme](https://img.shields.io/badge/Theme-ZED%20One%20Dark-1a1b26?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078d4?style=flat-square)
@@ -12,7 +12,7 @@
 
 > 📁 Semua screenshot disimpan di folder [`./images/`](./images/)
 
-### Tampilan Utama — Clean Editor + Minimap Auto-Hide
+### Tampilan Utama Clean Editor + Minimap Auto-Hide
 
 ![Main UI](image/main-ui.png)
 
@@ -50,22 +50,22 @@
 
 ### Extension Pendukung (Opsional)
 
-- `ritwickdey.LiveServer` — Live preview HTML
-- `formulahendry.code-runner` — Run code snippet
-- `ms-vscode.cpptools` — C/C++ IntelliSense
-- `ms-vscode.cmake-tools` — CMake integration
-- `redhat.vscode-community-server-connector` — Server connector
-- `RooVeterinaryInc.roo-cline` — AI coding assistant
+- `ritwickdey.LiveServer` - Live preview HTML
+- `formulahendry.code-runner` - Run code snippet
+- `ms-vscode.cpptools` - C/C++ IntelliSense
+- `ms-vscode.cmake-tools` - CMake integration
+- `redhat.vscode-community-server-connector` - Server connector
+- `RooVeterinaryInc.roo-cline` - AI coding assistant
 
 ### Font
 
-- **[FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)** — untuk terminal dengan icon support
+- **[FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)** - untuk terminal dengan icon support
 
 ### External Tools (Windows)
 
 - [Git for Windows](https://git-scm.com/download/win)
-- [MSYS2](https://www.msys2.org/) — untuk bash profile tambahan
-- MinGW-w64 via MSYS2 (`ucrt64`) — compiler C/C++
+- [MSYS2](https://www.msys2.org/) - untuk bash profile tambahan
+- MinGW-w64 via MSYS2 (`ucrt64`) - compiler C/C++
 
 ---
 
@@ -188,7 +188,7 @@ pacman -S mingw-w64-ucrt-x86_64-gcc
 
 > **Tips mengambil screenshot yang konsisten:**
 > - Gunakan resolusi lebar 1280px atau 1920px untuk semua gambar
-> - Crop rapi — hilangkan taskbar Windows, fokus hanya window VS Code
+> - Crop rapi - hilangkan taskbar Windows, fokus hanya window VS Code
 > - Pastikan tema ZED One Dark aktif saat mengambil screenshot
 > - Untuk GIF demo scroll, gunakan [ScreenToGif](https://www.screentogif.com/) (gratis, open source)
 
@@ -206,7 +206,7 @@ pacman -S mingw-w64-ucrt-x86_64-gcc
 
 ### File `.ipynb` Tetap Menampilkan "Idle" di Discord
 
-Ini **limitasi arsitektur VS Code** — custom editors (notebook) tidak trigger event `onDidChangeActiveTextEditor` yang dipakai ekstensi Discord [[ref]](https://github.com/iCrawl/discord-vscode/issues/802).
+Ini **limitasi arsitektur VS Code** - custom editors (notebook) tidak trigger event `onDidChangeActiveTextEditor` yang dipakai ekstensi Discord [[ref]](https://github.com/iCrawl/discord-vscode/issues/802).
 
 **Workaround:**
 - Buka file `.py` apa saja di tab samping → klik sekali → trigger "editing"
@@ -283,17 +283,17 @@ Copy-Item ".\settings.json" "$env:APPDATA\Code\User\settings.json" -Force
 
 ## Kredit & Referensi
 
-- **Zed Editor** — inspirasi desain UI minimalis
-- **VSCord** by [LeonardSSH](https://github.com/LeonardSSH/vscord) — Discord Rich Presence
+- **Zed Editor** - inspirasi desain UI minimalis
+- **VSCord** by [LeonardSSH](https://github.com/LeonardSSH/vscord) - Discord Rich Presence
 - **Material Icon Theme** by [PKief](https://github.com/PKief/vscode-material-icon-theme)
-- **FiraCode Nerd Font** — [nerdfonts.com](https://www.nerdfonts.com/)
-- Komunitas VS Code — dokumentasi custom layout & settings
+- **FiraCode Nerd Font** - [nerdfonts.com](https://www.nerdfonts.com/)
+- Komunitas VS Code - dokumentasi custom layout & settings
 
 ---
 
 ## License
 
-Personal configuration — free to use, modify, and share. No warranty provided.
+Personal configuration - free to use, modify, and share. No warranty provided.
 
 ---
 
