@@ -1,16 +1,52 @@
 {
-    // === PENGATURAN ANDA YANG DIPERTAHANKAN ===
+    // === PENGATURAN DASAR & TEMA ===
     "workbench.iconTheme": "material-icon-theme",
-    "cmake.configureOnOpen": true,
-    "[cpp]": {
-        "editor.wordBasedSuggestions": "off",
-        "editor.suggest.insertMode": "replace",
-        "editor.semanticHighlighting.enabled": true
-    },
-    "liveServer.settings.donotShowInfoMsg": true,
-    "debug.onTaskErrors": "debugAnyway",
-    "code-runner.runInTerminal": true,
-    "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+    "workbench.colorTheme": "ZED One Theme Dark",
+    "window.menuBarVisibility": "compact",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    
+    // === ZED-LIKE DECLUTTER & SCROLL ===
+    "workbench.statusBar.visible": false,
+    "workbench.editor.showTabs": "none",
+    "workbench.activityBar.compact": true,
+    "workbench.activityBar.location": "default",
+    
+    // Scrollbar minimalis & smooth
+    "editor.scrollbar.vertical": "auto",
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.verticalScrollbarSize": 6,
+    "editor.scrollbar.horizontalScrollbarSize": 6,
+    "editor.scrollbar.useShadows": false,
+    "editor.mouseWheelScrollSensitivity": 1.5,
+    "editor.fastScrollSensitivity": 5,
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+
+    // Minimap auto-hide
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "mouseover",
+    "editor.minimap.size": "proportional",
+    "editor.minimap.maxColumn": 40,
+
+    // Editor visual
+    "editor.lineNumbers": "on",
+    "editor.renderLineHighlight": "gutter",
+    "editor.guides.indentation": false,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "files.autoSave": "afterDelay",
+
+    // === TERMINAL DI KANAN (Zed-style) ===
+    "panel.defaultLocation": "right",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.panel.opensMaximized": "never",
+    "terminal.integrated.defaultLocation": "editor",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",
@@ -37,25 +73,40 @@
         }
     },
     "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    // === EXPLORER & GIT ===
+    "explorer.autoReveal": "focusNoScroll",
+    "explorer.compactFolders": true,
+    "explorer.openEditors.visible": 0,
+    "explorer.fileNesting.enabled": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     "git.autofetch": true,
     "diffEditor.renderSideBySide": false,
     "diffEditor.codeLens": true,
-    "workbench.editor.autoLockGroups": {
-        "jupyter-notebook": true
-    },
     "diffEditor.hideUnchangedRegions.enabled": true,
-    "vscode-pets.petColor": "white",
-    "workbench.settings.applyToAllProfiles": [
-        "vscode-pets.position"
-    ],
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-    "terminal.integrated.fontSize": 12,
-    "explorer.compactFolders": true,
-    "redhat.telemetry.enabled": true,
-    "[markdown]": {
-        "diffEditor.ignoreTrimWhitespace": false
+    "search.followSymlinks": false,
+
+    // === C/C++ & TOOLS ===
+    "cmake.configureOnOpen": true,
+    "[cpp]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
     },
+    "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+    "code-runner.runInTerminal": true,
+    "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
+    "debug.onTaskErrors": "debugAnyway",
+    "redhat.telemetry.enabled": true,
+    "roo-cline.debug": false,
+    "roo-cline.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show"
+    ],
+    "vscode-pets.petColor": "white",
     "claudeCode.preferredLocation": "panel",
     "rsp-ui.enableStartServerOnActivation": [
         {
@@ -64,89 +115,51 @@
             "startOnActivation": true
         }
     ],
-    "roo-cline.debug": false,
-    "roo-cline.allowedCommands": [
-        "git log",
-        "git diff",
-        "git show"
-    ],
-    "roo-cline.deniedCommands": [],
-    "workbench.activityBar.compact": true,
 
-    // === ZED-LIKE DECLUTTER + ENHANCED SCROLL ===
-    "workbench.activityBar.location": "default",
-    "workbench.statusBar.visible": false,
-    "workbench.editor.showTabs": "none",
-    "workbench.layoutControl.enabled": false,
-    "window.commandCenter": false,
-
-    // Scrollbar: tipis, auto-hide, klik/drag saat perlu
-    "editor.scrollbar.vertical": "auto",
-    "editor.scrollbar.horizontal": "auto",
-    "editor.scrollbar.verticalScrollbarSize": 6,
-    "editor.scrollbar.horizontalScrollbarSize": 6,
-    "editor.scrollbar.useShadows": false,
-    "editor.mouseWheelScrollSensitivity": 1.5,
-    "editor.fastScrollSensitivity": 5,
-    "editor.smoothScrolling": true,
-    "workbench.list.smoothScrolling": true,
-    "terminal.integrated.smoothScrolling": true,
-
-    // Minimap minimalis: blok warna, auto-hide on mouseover
-    "editor.minimap.enabled": true,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.showSlider": "mouseover",
-    "editor.minimap.size": "proportional",
-    "editor.minimap.maxColumn": 40,
-
-    "editor.lineNumbers": "on",
-    "editor.renderLineHighlight": "gutter",
-    "editor.guides.indentation": false,
-    "editor.bracketPairColorization.enabled": false,
-    "editor.overviewRulerBorder": false,
-    "editor.hideCursorInOverviewRuler": true,
-    "files.autoSave": "afterDelay",
-    "workbench.colorTheme": "ZED One Theme Dark",
-    "workbench.editorAssociations": {
-        "*.copilotmd": "vscode.markdown.preview.editor",
-        "*.exe": "default"
-    },
-
-    // === MODERN AUTO-HIDE NAVIGATION ===
-    "explorer.autoReveal": "focusNoScroll",
-    "panel.defaultLocation": "right",
-    "workbench.panel.opensMaximized": "never",
-    "explorer.openEditors.visible": 0,
-    "explorer.fileNesting.enabled": true,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "search.followSymlinks": false,
-
-    // === COMPACT MENU BAR ===
-    "window.menuBarVisibility": "compact",
-
-    // === VSCORD DISCORD RICH PRESENCE ===
+    // === VSCORD: OPTIMASI UNTUK DATA SCIENCE & NO IDLE ===
     "vscord.enabled": true,
-    "vscord.statusBar.enabled": false,
+    "vscord.statusBar.enabled": false, 
     "vscord.app.privacyMode.enable": false,
     
-    // Samakan semua state → tidak pernah idle
+    // 🔥 HAPUS MODE IDLE: Semua status diset sebagai "Editing"
     "vscord.details.idle": "📝 Editing {file_name}",
     "vscord.details.editing": "📝 Editing {file_name}",
     "vscord.details.debugging": "🐛 Debugging {file_name}",
     "vscord.lowerDetails.idle": "🔧 {workspace}",
     "vscord.lowerDetails.editing": "🔧 {workspace}",
-    "vscord.lowerDetails.debugging": " Fixing bugs in {workspace}",
+    "vscord.lowerDetails.debugging": "Fixing bugs in {workspace}",
     
-    // 🔥 KUNCI: Perpanjang timeout idle ke 24 jam
+    // 🔥 TIMEOUT IDLE DISET SANGAT BESAR (24 Jam) agar tidak pernah masuk mode idle
     "vscord.idle.timeout": 86400000,
     
-    // 🔥 KUNCI: Tampilkan teks fallback saat language tidak dikenali (misal: jupyter-notebook)
-    "vscord.details.notFound": "📓 Jupyter Notebook",
+    // 🔥 FALLBACK KHUSUS UNTUK .ipynb / JUPYTER
+    "vscord.details.notFound": "📓 Working on Data Science",
     "vscord.lowerDetails.notFound": "🔧 {workspace}",
+    "vscord.largeImageKey.notFound": "jupyter", 
     
+    // Tombol GitHub
     "vscord.buttons.button1.enabled": true,
     "vscord.buttons.button1.text": "📂 GitHub Repo",
     "vscord.buttons.button1.url": "https://github.com/{git_owner}/{git_repo}",
-    "vscord.buttons.button2.enabled": false
+    "vscord.buttons.button2.enabled": false,
+
+    // === ASOSIASI FILE & TRICK .ipynb ===
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.exe": "default",
+        "*.ipynb": "jupyter-notebook"
+    },
+    
+    // 🔥 INI KUNCINYA: Memaksa .ipynb dibaca sebagai Python oleh VScord
+    "files.associations": {
+        "*.ipynb": "python"
+    },
+
+    // === PENGATURAN LAINNYA ===
+    "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "vscode-pets.position"
+    ]
 }
