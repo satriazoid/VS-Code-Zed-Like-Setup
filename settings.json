@@ -5,14 +5,12 @@
     "window.menuBarVisibility": "compact",
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
-    
+
     // === ZED-LIKE DECLUTTER & SCROLL ===
     "workbench.statusBar.visible": false,
     "workbench.editor.showTabs": "none",
     "workbench.activityBar.compact": true,
     "workbench.activityBar.location": "default",
-    
-    // Scrollbar minimalis & smooth
     "editor.scrollbar.vertical": "auto",
     "editor.scrollbar.horizontal": "auto",
     "editor.scrollbar.verticalScrollbarSize": 6,
@@ -24,11 +22,12 @@
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
 
+    // Python Analysis Settings
     "python.analysis.diagnosticSeverityOverrides": {
-    "reportMissingImports": "none",
-    "reportMissingModuleSource": "none",
-    "reportGeneralTypeIssues": "none",
-    "reportOptionalMemberAccess": "none"
+        "reportMissingImports": "none",
+        "reportMissingModuleSource": "none",
+        "reportGeneralTypeIssues": "none",
+        "reportOptionalMemberAccess": "none"
     },
     "python.analysis.typeCheckingMode": "off",
 
@@ -56,6 +55,11 @@
     "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.profiles.windows": {
+        "Nushell": {
+            "path": "C:\\Users\\Jejo\\AppData\\Local\\Programs\\nu\\bin\\nu.exe",
+            "args": [],
+            "icon": "terminal-powershell"
+        },
         "PowerShell": {
             "source": "PowerShell",
             "icon": "terminal-powershell"
@@ -74,13 +78,9 @@
         "Bash": {
             "path": "C:\\Program Files\\Git\\bin\\bash.exe",
             "args": ["-l"]
-        },
-        "bash (MSYS2)": {
-            "path": "C:\\msys64\\usr\\bin\\bash.exe",
-            "args": ["--login", "-i"]
         }
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows": "Nushell",
 
     // === EXPLORER & GIT ===
     "explorer.autoReveal": "focusNoScroll",
@@ -124,46 +124,44 @@
         }
     ],
 
-    // === VSCORD: OPTIMASI UNTUK DATA SCIENCE & NO IDLE ===
-    "vscord.enabled": true,
-    "vscord.statusBar.enabled": false, 
-    "vscord.app.privacyMode.enable": false,
+    // === DISCORD PRESENCE BY CRAWL: FIX OVERFLOW & SWITCH WINDOW ===
+    "discordPresence.enabled": true,
+    "discordPresence.idleTimeout": 86400,
+    "discordPresence.autoReconnect": true,
+    "discordPresence.hideOnIdle": false,
     
-    // 🔥 HAPUS MODE IDLE: Semua status diset sebagai "Editing"
-    "vscord.details.idle": "📝 Editing {file_name}",
-    "vscord.details.editing": "📝 Editing {file_name}",
-    "vscord.details.debugging": "🐛 Debugging {file_name}",
-    "vscord.lowerDetails.idle": "🔧 {workspace}",
-    "vscord.lowerDetails.editing": "🔧 {workspace}",
-    "vscord.lowerDetails.debugging": "Fixing bugs in {workspace}",
+    // Detail Status
+    "discordPresence.details.idle": "📝 Editing {file_name}",
+    "discordPresence.details.editing": "📝 Editing {file_name}",
+    "discordPresence.details.debugging": "🐛 Debugging {file_name}",
+    "discordPresence.state.idle": "🔧 {workspace}",
+    "discordPresence.state.editing": "{workspace}",
+    "discordPresence.state.debugging": "Fixing bugs in {workspace}",
     
-    // 🔥 TIMEOUT IDLE DISET SANGAT BESAR (24 Jam) agar tidak pernah masuk mode idle
-    "vscord.idle.timeout": 86400000,
-    
-    // 🔥 FALLBACK KHUSUS UNTUK .ipynb / JUPYTER
-    "vscord.details.notFound": "📓 Working on Data Science",
-    "vscord.lowerDetails.notFound": "🔧 {workspace}",
-    "vscord.largeImageKey.notFound": "jupyter", 
+    // Deteksi Jupyter Notebook
+    "discordPresence.customFiles": {
+        "*.ipynb": {
+            "details": "📓 Working on Data Science",
+            "state": "🔧 {workspace}",
+            "largeImageKey": "jupyter",
+            "largeImageText": "Jupyter Notebook"
+        }
+    },
     
     // Tombol GitHub
-    "vscord.buttons.button1.enabled": true,
-    "vscord.buttons.button1.text": "📂 GitHub Repo",
-    "vscord.buttons.button1.url": "https://github.com/{git_owner}/{git_repo}",
-    "vscord.buttons.button2.enabled": false,
+    "discordPresence.buttons.button1.enabled": true,
+    "discordPresence.buttons.button1.text": " GitHub Repo",
+    "discordPresence.buttons.button1.url": "https://github.com/{git_owner}/{git_repo}",
+    "discordPresence.buttons.button2.enabled": false,
 
-    // === ASOSIASI FILE & TRICK .ipynb ===
-    "workbench.editorAssociations": {
-        "*.copilotmd": "vscode.markdown.preview.editor",
-        "*.exe": "default",
-        "*.ipynb": "jupyter-notebook"
-    },
-    
-    
-
-    // 🔥 INI KUNCINYA: Memaksa .ipynb dibaca sebagai Python oleh VScord
-    "files.associations": {
-        "*.ipynb": "python"
-    },
+    // === SIDEBAR & OUTLINE ===
+    "workbench.view.explorer.outline.visible": false,
+    "workbench.view.explorer.timeline.visible": false,
+    "workbench.activityBar.hiddenViewContainers": [
+        "remote",
+        "server",
+        "servers"
+    ],
 
     // === PENGATURAN LAINNYA ===
     "[markdown]": {
